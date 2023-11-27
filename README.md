@@ -12,7 +12,11 @@ Creating A Load Balancer using kubernetes
 ### Real-life examples of load balancing used in production environments
 
 
-## Kubernetes Cluster Setup
+
+## Load Balancing in K8s
+
+
+### Kubernetes Cluster Setup
 
 Install minikube, kubectl on your system.
 
@@ -37,13 +41,31 @@ It will perform the following tasks:
 
 Reference: [https://minikube.sigs.k8s.io/docs/drivers/kvm2/](https://minikube.sigs.k8s.io/docs/drivers/kvm2/)
 
+Step 2: Deployment of minikube(kubernetes cluster)
 
-Step 2: `kubectl get po -A`
+`kubectl apply -f deployment.yaml`
+
+You should get an output similar to this:
+
+        service/flask-test-service created
+        deployment.apps/flask-test-app created
+
+Step 3: 
+
+`kubectl get po -A`
 
 ![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/fcdd1ebd-b1eb-4dee-b318-a273d734396c)
 
+`kubectl get po`
 
-Step 3: `minikube dashboard`
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/36270008-ce40-4b1e-8ad2-135a3d3b2a80)
+
+
+`kubectl get svc`
+
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/8bd120df-1a10-4f8e-9159-c010a227649f)
+
+`minikube dashboard`
 
 ![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/23136488-9549-430a-90d0-aee294faeb64)
 
@@ -56,12 +78,16 @@ On the browser,
 
 You can access your flask application in your local host browser. 
 
+`minikube service flask-test-service`
+
 ![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/615c62bc-4351-4886-9c8d-c4cafc071d6c)
 
 ![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/1f779b43-755a-4050-be9c-46302215cdac)
 
 
-Step 4: Deploy applications
+
+
+
 
 Reference: [https://minikube.sigs.k8s.io/docs/start/](https://minikube.sigs.k8s.io/docs/start/)
 [https://minikube.sigs.k8s.io/docs/drivers/kvm2/](https://minikube.sigs.k8s.io/docs/drivers/kvm2/)
@@ -72,13 +98,6 @@ Docker Hub
 ![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/7a674a09-49f5-4da7-979c-d38739d02ea1)
 
 
-## LOAD BALANCING IN K8S 
 
-### Steps to demonstrate Load Balancing in Kubernetes
 
-- Setup a Kubernetes deployment using a deployment manifest file: This will create 3 pods replica each with an Nginx image
-
-- Check pods are running or not.
-
-- Create a load balancing service.
 
