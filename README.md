@@ -32,24 +32,34 @@ It will perform the following tasks:
 - Starting control plane node minikube in cluster minikube
 - Pulling base image ...
     > gcr.io/k8s-minikube/kicbase..
-- It will create a docker container (CPUs=2, Memory=2200MB).
-- Preparing Kubernetes v1.28.3 on Docker 24.0.7
+- Preparing Kubernetes v1.28.3 on kvm.
 - kubectl is now configured to use "minikube" cluster and "default" namespace by default
 
-Reference: [https://minikube.sigs.k8s.io/docs/drivers/docker/](https://minikube.sigs.k8s.io/docs/drivers/docker/)
+Reference: [https://minikube.sigs.k8s.io/docs/drivers/kvm2/](https://minikube.sigs.k8s.io/docs/drivers/kvm2/)
 
 
 Step 2: `kubectl get po -A`
 
-![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/b45602c5-e445-4eb7-ac01-93942256f0fa)
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/fcdd1ebd-b1eb-4dee-b318-a273d734396c)
+
 
 Step 3: `minikube dashboard`
 
-![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/9966995e-f6ab-4276-9c44-12431afe1a53)
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/23136488-9549-430a-90d0-aee294faeb64)
+
 
 On the browser, 
 
-![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/96b51297-ad1a-4088-9cb7-436a57e5ec05)
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/3d264138-b94a-4ee6-95f7-a1e8123eb65d)
+
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/16006291-ae24-433f-b665-1f4bbc840885)
+
+You can access your flask application in your local host browser. 
+
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/615c62bc-4351-4886-9c8d-c4cafc071d6c)
+
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/1f779b43-755a-4050-be9c-46302215cdac)
+
 
 Step 4: Deploy applications
 
