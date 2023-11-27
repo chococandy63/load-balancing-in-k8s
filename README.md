@@ -56,6 +56,12 @@ Step 4: Deploy applications
 Reference: [https://minikube.sigs.k8s.io/docs/start/](https://minikube.sigs.k8s.io/docs/start/)
 [https://minikube.sigs.k8s.io/docs/drivers/kvm2/](https://minikube.sigs.k8s.io/docs/drivers/kvm2/)
 
+
+Docker Hub
+
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/7a674a09-49f5-4da7-979c-d38739d02ea1)
+
+
 ## LOAD BALANCING IN K8S 
 
 ### Steps to demonstrate Load Balancing in Kubernetes
