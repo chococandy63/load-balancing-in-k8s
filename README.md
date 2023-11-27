@@ -23,7 +23,10 @@ Minikube is used to create a local K8s cluster. After installing minikube, run t
 - Create a service: You need to create a service that exposes your deployment to the network. You can use a YAML file to define the service. In the YAML file, you can specify the type field as LoadBalancer to create a load balancer service.
 - Deploy the service: You can deploy the service using the kubectl create command.
 
-Step 1: `minikube start --driver=docker`
+Step 1: `minikube start --driver=kvm2`
+
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/9c869cb2-00f3-4699-9429-2321303ba968)
+
 
 It will perform the following tasks:
 - Starting control plane node minikube in cluster minikube
@@ -51,7 +54,7 @@ On the browser,
 Step 4: Deploy applications
 
 Reference: [https://minikube.sigs.k8s.io/docs/start/](https://minikube.sigs.k8s.io/docs/start/)
-
+[https://minikube.sigs.k8s.io/docs/drivers/kvm2/](https://minikube.sigs.k8s.io/docs/drivers/kvm2/)
 
 ## LOAD BALANCING IN K8S 
 
