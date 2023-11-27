@@ -18,6 +18,11 @@ Install minikube, kubectl on your system.
 
 Minikube is used to create a local K8s cluster. After installing minikube, run the following commands to start a minikube cluster on docker.
 
+- Create a Kubernetes cluster: You need to have a Kubernetes cluster running on Fedora. You can use a tool like kubeadm to create a cluster.
+- Create a deployment: You need to create a deployment that defines the pods that will run your application. You can use a YAML file to define the deployment.
+- Create a service: You need to create a service that exposes your deployment to the network. You can use a YAML file to define the service. In the YAML file, you can specify the type field as LoadBalancer to create a load balancer service.
+- Deploy the service: You can deploy the service using the kubectl create command.
+
 Step 1: `minikube start --driver=docker`
 
 It will perform the following tasks:
@@ -37,9 +42,15 @@ Step 2: `kubectl get po -A`
 
 Step 3: `minikube dashboard`
 
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/9966995e-f6ab-4276-9c44-12431afe1a53)
 
 On the browser, 
 
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/96b51297-ad1a-4088-9cb7-436a57e5ec05)
+
+Step 4: Deploy applications
+
+Reference: [https://minikube.sigs.k8s.io/docs/start/](https://minikube.sigs.k8s.io/docs/start/)
 
 
 ## LOAD BALANCING IN K8S 
@@ -52,4 +63,3 @@ On the browser,
 
 - Create a load balancing service.
 
-- 
