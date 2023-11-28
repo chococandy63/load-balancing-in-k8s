@@ -2,7 +2,9 @@
 Creating A Load Balancer using kubernetes
 
 ## Kubernetes Architecture 
-[Diagram]
+
+![image](https://github.com/chococandy63/load-balancing-in-k8s/assets/79960426/f2d7da6c-f15d-4429-a922-4d39dfee0894)
+
 
 ### Why Load Balancing is required?
 
